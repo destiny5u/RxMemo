@@ -23,6 +23,10 @@
 		AEBD63C2267E2F0400D9E7C1 /* MemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD63C1267E2F0400D9E7C1 /* MemosViewController.swift */; };
 		AEBD63C4267E2F3E00D9E7C1 /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD63C3267E2F3E00D9E7C1 /* MemoDetailViewController.swift */; };
 		AEBD63C6267E2F6100D9E7C1 /* MemoComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD63C5267E2F6100D9E7C1 /* MemoComposeViewController.swift */; };
+		AEBD63C8267E2FB900D9E7C1 /* MemosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD63C7267E2FB900D9E7C1 /* MemosViewModel.swift */; };
+		AEBD63CA267E2FE400D9E7C1 /* MemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD63C9267E2FE400D9E7C1 /* MemoDetailViewModel.swift */; };
+		AEBD63CC267E300600D9E7C1 /* MemoComposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD63CB267E300600D9E7C1 /* MemoComposeViewModel.swift */; };
+		AEBD63CE267E30C600D9E7C1 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD63CD267E30C600D9E7C1 /* ViewModelBindableType.swift */; };
 		FAB029005FBF585BC5A8BDB9 /* Pods_RxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267B5355EB9C53948D85993B /* Pods_RxMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +75,10 @@
 		AEBD63C1267E2F0400D9E7C1 /* MemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemosViewController.swift; sourceTree = "<group>"; };
 		AEBD63C3267E2F3E00D9E7C1 /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
 		AEBD63C5267E2F6100D9E7C1 /* MemoComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewController.swift; sourceTree = "<group>"; };
+		AEBD63C7267E2FB900D9E7C1 /* MemosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemosViewModel.swift; sourceTree = "<group>"; };
+		AEBD63C9267E2FE400D9E7C1 /* MemoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewModel.swift; sourceTree = "<group>"; };
+		AEBD63CB267E300600D9E7C1 /* MemoComposeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewModel.swift; sourceTree = "<group>"; };
+		AEBD63CD267E30C600D9E7C1 /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
 		C19BB335A2A23749D25FFCA2 /* Pods-RxMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.release.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.release.xcconfig"; sourceTree = "<group>"; };
 		CB907CE9FE6E28F72855C5B7 /* Pods-RxMemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemoTests.debug.xcconfig"; path = "Target Support Files/Pods-RxMemoTests/Pods-RxMemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +183,7 @@
 				AEBD63C1267E2F0400D9E7C1 /* MemosViewController.swift */,
 				AEBD63C3267E2F3E00D9E7C1 /* MemoDetailViewController.swift */,
 				AEBD63C5267E2F6100D9E7C1 /* MemoComposeViewController.swift */,
+				AEBD63CD267E30C600D9E7C1 /* ViewModelBindableType.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -182,6 +191,9 @@
 		AEBD63B6267E225E00D9E7C1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AEBD63C7267E2FB900D9E7C1 /* MemosViewModel.swift */,
+				AEBD63C9267E2FE400D9E7C1 /* MemoDetailViewModel.swift */,
+				AEBD63CB267E300600D9E7C1 /* MemoComposeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -481,11 +493,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEBD63C0267E285C00D9E7C1 /* MemoryStorage.swift in Sources */,
+				AEBD63CC267E300600D9E7C1 /* MemoComposeViewModel.swift in Sources */,
 				AEBD63C4267E2F3E00D9E7C1 /* MemoDetailViewController.swift in Sources */,
+				AEBD63CE267E30C600D9E7C1 /* ViewModelBindableType.swift in Sources */,
 				AE7BAF7F267E1E1200110BBD /* AppDelegate.swift in Sources */,
 				AEBD63BC267E265600D9E7C1 /* MemoStorageType.swift in Sources */,
+				AEBD63C8267E2FB900D9E7C1 /* MemosViewModel.swift in Sources */,
 				AE7BAF81267E1E1200110BBD /* SceneDelegate.swift in Sources */,
 				AE7BAF89267E1E1200110BBD /* RxMemo.xcdatamodeld in Sources */,
+				AEBD63CA267E2FE400D9E7C1 /* MemoDetailViewModel.swift in Sources */,
 				AEBD63C2267E2F0400D9E7C1 /* MemosViewController.swift in Sources */,
 				AEBD63C6267E2F6100D9E7C1 /* MemoComposeViewController.swift in Sources */,
 				AEBD63BA267E252A00D9E7C1 /* Memo.swift in Sources */,
