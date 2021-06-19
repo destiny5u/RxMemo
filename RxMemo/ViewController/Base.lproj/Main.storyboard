@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-16" y="89"/>
         </scene>
-        <!--View Controller-->
+        <!--Memo Detail View Controller-->
         <scene sceneID="Ubz-nO-Mhb">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="mLY-Gb-QKB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="mLY-Gb-QKB" customClass="MemoDetailViewController" customModule="RxMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yo7-BW-Zvd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="2765" y="748"/>
         </scene>
-        <!--View Controller-->
+        <!--Memo Compose View Controller-->
         <scene sceneID="9Pb-D4-4EV">
             <objects>
-                <viewController id="TE9-Se-oWg" sceneMemberID="viewController">
+                <viewController id="TE9-Se-oWg" customClass="MemoComposeViewController" customModule="RxMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wmo-xz-cMi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
         <!--Memos-->
         <scene sceneID="Arn-Je-qoB">
             <objects>
-                <viewController id="H2U-jb-38n" sceneMemberID="viewController">
+                <viewController id="H2U-jb-38n" customClass="MemosViewController" customModule="RxMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i21-Px-Tj5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
