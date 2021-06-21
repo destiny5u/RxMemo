@@ -7,6 +7,6 @@
 
 import Foundation
 
-class MemoDetailViewModel {
+class MemoDetailViewModel: CommonViewModel {
     
 }

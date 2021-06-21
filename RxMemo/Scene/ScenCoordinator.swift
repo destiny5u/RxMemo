@@ -22,57 +22,59 @@ class SceneCoordinator: SceneCoordinatorType {
     
     @discardableResult
     func transition(to scene: Scene, using style: TransitionStyle, animated: Bool) -> Completable {
-        return Completable.create { [unowned self] completable in
-            let subject = PublishSubject<Void>()
-            let target = scene.instantiate()
+//        return Completable.create { [unowned self] completable in
+//            let subject = PublishSubject<Void>()
+//            let target = scene.instantiate()
+//
+//            switch style {
+//            case .root:
+//                currentVC = target
+//                window.rootViewController = target
+//                subject.onCompleted()
+//            case .push:
+//                guard let nav = currentVC.navigationController else {
+//                    subject.onError(TransitionError.navigationControllerMissing)
+//                    break
+//                }
+//                nav.pushViewController(target, animated: animated)
+//                currentVC = target
+//
+//                subject.onCompleted()
+//            case .modal:
+//                currentVC.present(target, animated: animated) {
+//                    subject.onCompleted()
+//                }
+//                currentVC = target
+//            }
+//            return Disposables.create()
+//        }
+        
+        let subject = PublishSubject<Void>()
+        let target = scene.instantiate()
 
-            switch style {
-            case .root:
-                currentVC = target
-                window.rootViewController = target
-                subject.onCompleted()
-            case .push:
-                guard let nav = currentVC.navigationController else {
-                    subject.onError(TransitionError.navigationControllerMissing)
-                    break
-                }
-                nav.pushViewController(target, animated: animated)
-                currentVC = target
-
-                subject.onCompleted()
-            case .modal:
-                currentVC.present(target, animated: animated) {
-                    subject.onCompleted()
-                }
-                currentVC = target
+        switch style {
+        case .root:
+            currentVC = target
+            window.rootViewController = target
+            subject.onCompleted()
+        case .push:
+            guard let nav = currentVC.navigationController else {
+                subject.onError(TransitionError.navigationControllerMissing)
+                break
             }
-            return Disposables.create()
+            nav.pushViewController(target, animated: animated)
+            currentVC = target
+
+            subject.onCompleted()
+        case .modal:
+            currentVC.present(target, animated: animated) {
+                subject.onCompleted()
+            }
+            currentVC = target
         }
         
-//        let subject = PublishSubject<Void>()
-//        let target = scene.instantiate()
-//
-//        switch style {
-//        case .root:
-//            currentVC = target
-//            window.rootViewController = target
-//            subject.onCompleted()
-//        case .push:
-//            guard let nav = currentVC.navigationController else {
-//                subject.onError(TransitionError.navigationControllerMissing)
-//                break
-//            }
-//            nav.pushViewController(target, animated: animated)
-//            currentVC = target
-//
-//            subject.onCompleted()
-//        case .modal:
-//            currentVC.present(target, animated: animated) {
-//                subject.onCompleted()
-//            }
-//            currentVC = target
-//        }
-//        return subject.ignoreElements()
+        // subject.ignoreElements()를 하면 서브젝트의 반환형이 Completable로 방출된다.
+        return subject.ignoreElements().asCompletable()
     }
     
     @discardableResult

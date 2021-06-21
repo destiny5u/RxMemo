@@ -6,9 +6,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import NSObject_Rx
 
 class MemosViewController: UIViewController, ViewModelBindableType {
-    var viewModel: MemoComposeViewModel!
+    var viewModel: MemosViewModel!
+    
+    @IBOutlet weak var listTableView: UITableView!
+    @IBOutlet weak var addButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,9 +23,16 @@ class MemosViewController: UIViewController, ViewModelBindableType {
     }
     
     func bindViewModel() {
+        viewModel.title
+            .drive(navigationItem.rx.title)
+            .disposed(by: rx.disposeBag)
         
+        viewModel.memos
+            .bind(to: listTableView.rx.items(cellIdentifier: "cell")) {row, memo, cell in
+                cell.textLabel?.text = memo.content
+            }
+            .disposed(by: rx.disposeBag)
     }
-    
 
     /*
     // MARK: - Navigation
