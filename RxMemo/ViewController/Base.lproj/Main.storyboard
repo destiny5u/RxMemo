@@ -48,21 +48,40 @@
             </objects>
             <point key="canvasLocation" x="2765" y="748"/>
         </scene>
-        <!--Memo Compose View Controller-->
+        <!--New Memo-->
         <scene sceneID="9Pb-D4-4EV">
             <objects>
                 <viewController id="TE9-Se-oWg" customClass="MemoComposeViewController" customModule="RxMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wmo-xz-cMi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dDX-4N-fnk">
+                                <rect key="frame" x="20" y="140" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7iu-zm-Qk6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BJ0-dk-x71"/>
+                    <navigationItem key="navigationItem" title="New Memo" id="BJ0-dk-x71">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3vE-uf-pQ6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Tpg-1l-zBX"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="3vE-uf-pQ6" id="LdI-Rb-8jh"/>
+                        <outlet property="contentTextView" destination="dDX-4N-fnk" id="vtE-ge-z2z"/>
+                        <outlet property="saveButton" destination="Tpg-1l-zBX" id="nbS-o0-Chs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMT-fi-3cf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="-94"/>
+            <point key="canvasLocation" x="2644.9275362318845" y="-94.419642857142847"/>
         </scene>
         <!--Memos-->
         <scene sceneID="Arn-Je-qoB">
@@ -150,6 +169,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
